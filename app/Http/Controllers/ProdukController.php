@@ -7,6 +7,7 @@ use App\Models\Produk;
 use App\Models\Kategori;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Image;
 
 class ProdukController extends Controller
 {
@@ -85,7 +86,20 @@ class ProdukController extends Controller
         }else{
             $extension = $request->foto->getClientOriginalExtension(); 
             $filename = uniqid().'.'.$extension;
+            
             $request->foto->storeAs('/public/'.$request->toko_id,$filename);
+
+            $image = $request->file('foto');
+            $input['imagename'] = time().'.'.$image->extension();
+        
+            $filePath = public_path('storage');
+           //dd($filePath);
+            $img = Image::make($image->path());
+            $img->resize(1000, 1000, function ($const) {
+                $const->aspectRatio();
+            })->save($filePath.'/'.$filename);
+    
+            $filePath = public_path('/images');
         }
 
         $attr = $request->all();

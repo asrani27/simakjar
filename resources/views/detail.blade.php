@@ -15,7 +15,7 @@
           </div>
           <div class="col-12 col-sm-6">
             <h3 class="my-3">{{$produk->nama}}</h3>
-            <p>{{$produk->deskripsi}}</p>
+            <p>{!!$produk->deskripsi!!}</p>
 
             <hr>
 
