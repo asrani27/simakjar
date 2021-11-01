@@ -87,7 +87,7 @@
     <div class="card card-widget widget-user">
       <!-- Add the bg color to the header using any of the bg-* classes -->
       <a href="/produk/{{$item->id}}/detail">
-      <div class="widget-user-header text-white" style="background: url('/storage/{{$item->foto}}') center center; height:160px; background-size:cover;">
+      <div class="widget-user-header text-white" style="background: url('/storage/{{$item->toko_id}}/{{$item->foto}}') center center; height:160px; background-size:cover;">
       </div>
       </a>
       <div class="card-body">

@@ -10,7 +10,7 @@
           <div class="col-12 col-sm-6">
             <h3 class="d-inline-block d-sm-none">{{$produk->nama}}</h3>
             <div class="col-12">
-              <img src="/storage/{{$produk->foto}}" class="product-image" alt="Product Image">
+              <img src="/storage/{{$item->toko_id}}/{{$produk->foto}}" class="product-image" alt="Product Image">
             </div>
           </div>
           <div class="col-12 col-sm-6">
@@ -68,7 +68,7 @@
       <div class="card card-widget widget-user">
         <!-- Add the bg color to the header using any of the bg-* classes -->
         <a href="/produk/{{$item->id}}/detail">
-        <div class="widget-user-header text-white" style="background: url('/storage/{{$item->foto}}') center center; height:160px; background-size:cover;">
+        <div class="widget-user-header text-white" style="background: url('/storage/{{$item->toko_id}}/{{$item->foto}}') center center; height:160px; background-size:cover;">
         </div>
         </a>
         <div class="card-body">
