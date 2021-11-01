@@ -94,7 +94,7 @@
         <div class="row">
           <div class="col-sm-12">
               <span class="text-secondary text-bold"><a href="/produk/{{$item->id}}/detail" class="text-muted">{{$item->nama}}</a></span><br/>
-              <span class="text-danger text-bold">Rp. {{number_format($item->harga)}}</span>
+              {{-- <span class="text-danger text-bold">Rp. {{number_format($item->harga)}}</span> --}}
           </div>
           <!-- /.col -->
         </div>
