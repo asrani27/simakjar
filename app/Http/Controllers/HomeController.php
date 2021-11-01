@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Carbon\Carbon;
 use App\Models\Soal;
+use App\Models\Toko;
 use App\Models\Waktu;
 use App\Models\Banner;
 use App\Models\Produk;
@@ -30,7 +31,10 @@ class HomeController extends Controller
 
     public function superadmin()
     {       
-        return view('superadmin.home');
+        $pu = count(Toko::get());
+        $pr = count(Produk::get());
+        $kat = count(Kategori::get());
+        return view('superadmin.home',compact('pu','pr','kat'));
     }
 
     public function gantipass()

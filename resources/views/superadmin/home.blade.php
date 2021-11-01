@@ -15,7 +15,7 @@ Beranda
 
         <div class="info-box-content">
           <span class="info-box-text">Total Pelaku Usaha</span>
-          <span class="info-box-number">34</span>
+          <span class="info-box-number">{{$pu}}</span>
 
           <div class="progress">
             <div class="progress-bar" style="width: 70%"></div>
@@ -32,7 +32,7 @@ Beranda
 
         <div class="info-box-content">
           <span class="info-box-text">Total Produk</span>
-          <span class="info-box-number">23</span>
+          <span class="info-box-number">{{$pr}}</span>
 
           <div class="progress">
             <div class="progress-bar" style="width: 70%"></div>
@@ -49,7 +49,7 @@ Beranda
 
         <div class="info-box-content">
           <span class="info-box-text">Total Kategori</span>
-          <span class="info-box-number">34</span>
+          <span class="info-box-number">{{$kat}}</span>
 
           <div class="progress">
             <div class="progress-bar" style="width: 70%"></div>
@@ -66,7 +66,7 @@ Beranda
 
         <div class="info-box-content">
           <span class="info-box-text">Tanggal</span>
-          <span class="info-box-number">as</span>
+          <span class="info-box-number">{{\Carbon\Carbon::today()->format('d M Y')}}</span>
 
           <div class="progress">
             <div class="progress-bar" style="width: 70%"></div>

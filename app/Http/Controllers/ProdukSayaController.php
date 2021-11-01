@@ -7,6 +7,8 @@ use App\Models\Kategori;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+use Image;
+
 
 class ProdukSayaController extends Controller
 {
@@ -26,7 +28,6 @@ class ProdukSayaController extends Controller
     
     public function store(Request $request)
     {
-        
         $toko_id = Auth::user()->toko->id;
 
         $validator = Validator::make($request->all(), [
@@ -44,14 +45,29 @@ class ProdukSayaController extends Controller
         }else{
             $extension = $request->foto->getClientOriginalExtension(); 
             $filename = uniqid().'.'.$extension;
+            
             $request->foto->storeAs('/public/'.$toko_id,$filename);
+
+            $image = $request->file('foto');
+            $input['imagename'] = time().'.'.$image->extension();
+        
+            $filePath = public_path('storage');
+           //dd($filePath);
+            $img = Image::make($image->path());
+            $img->resize(1000, 1000, function ($const) {
+                $const->aspectRatio();
+            })->save($filePath.'/'.$filename);
+    
+            $filePath = public_path('/images');
+            
         }
 
+ 
         
         $attr = $request->all();
         $attr['foto'] = $filename;
         $attr['toko_id'] = $toko_id;
-        //dd($attr);
+        
         Produk::create($attr);
         
         toastr()->success('Sukses Di Simpan');
