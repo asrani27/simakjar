@@ -130,7 +130,7 @@ class HomeController extends Controller
         $kategori = Kategori::get();
         $profil = Profil::first();
         $produk = Produk::find($id);
-        $data = Produk::get()->random(6);
+        $data = Produk::get()->random();
         return view('detail',compact('profil','kategori','produk','data'));
     }
 }
