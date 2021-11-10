@@ -22,7 +22,7 @@
         <a href="/superadmin/toko" class="nav-link {{ Request::is('superadmin/toko*') ? 'active' : '' }}">
             <i class="nav-icon fas fa-users"></i>
             <p>
-                Pelaku Usaha
+                Pengrajin
             </p>
         </a>
     </li>

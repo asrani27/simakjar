@@ -23,6 +23,7 @@ use App\Http\Controllers\PersyaratanController;
 Route::get('/', [HomeController::class, 'welcome']);
 Route::get('/tentangkami', [HomeController::class, 'tentang']);
 Route::get('/kontak', [HomeController::class, 'kontak']);
+Route::get('/pengrajin', [HomeController::class, 'pengrajin']);
 Route::get('/semuaproduk', [HomeController::class, 'semuaproduk']);
 Route::get('/kategori/{id}/detail', [HomeController::class, 'kategoriproduk']);
 Route::get('/produk/cari', [HomeController::class, 'cariProduk']);

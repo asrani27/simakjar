@@ -52,7 +52,7 @@ class ProdukSayaController extends Controller
             $input['imagename'] = time().'.'.$image->extension();
         
             $filePath = public_path('storage');
-           //dd($filePath);
+            
             $img = Image::make($image->path());
             $img->resize(1000, 1000, function ($const) {
                 $const->aspectRatio();

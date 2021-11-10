@@ -40,6 +40,9 @@
           <li class="nav-item">
             <a href="/tentangkami" class="nav-link"><i class="fas fa-university"></i> Tentang Kami</a>
           </li>
+          <li class="nav-item">
+            <a href="/pengrajin" class="nav-link"><i class="fas fa-user"></i> Pengrajin</a>
+          </li>
           <li class="nav-item dropdown">
             <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fas fa-shopping-cart"></i> Produk</a>
             <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">

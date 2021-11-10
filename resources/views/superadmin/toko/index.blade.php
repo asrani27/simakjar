@@ -13,7 +13,7 @@
         <br/><br/>
         <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Data Pelaku Usaha</h3>
+            <h3 class="card-title">Data Pengrajin</h3>
             <div class="card-tools">
             </div>
         </div>
@@ -24,7 +24,7 @@
                 <tr>
                 <th>#</th>
                 <th>Gambar</th>
-                <th>Nama Toko/Pelaku Usaha</th>
+                <th>Nama Toko/Pengrajin</th>
                 <th>Telp</th>
                 <th>Username</th>
                 <th>Aksi</th>
