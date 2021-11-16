@@ -145,4 +145,15 @@ class HomeController extends Controller
         $pengrajin = Toko::get();
         return view('pengrajin',compact('profil','kategori','pengrajin'));
     }
+
+    public function produkPengrajin($id)
+    {
+        $produk = Produk::where('toko_id', $id)->get();
+        
+        $kategori = Kategori::get();
+        $profil = Profil::first();
+        $pengrajin = Toko::find($id);
+        return view('pengrajin_produk',compact('profil','kategori','pengrajin','produk'));
+
+    }
 }

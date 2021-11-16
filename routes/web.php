@@ -24,6 +24,7 @@ Route::get('/', [HomeController::class, 'welcome']);
 Route::get('/tentangkami', [HomeController::class, 'tentang']);
 Route::get('/kontak', [HomeController::class, 'kontak']);
 Route::get('/pengrajin', [HomeController::class, 'pengrajin']);
+Route::get('/pengrajin/produk/{id}', [HomeController::class, 'produkPengrajin']);
 Route::get('/semuaproduk', [HomeController::class, 'semuaproduk']);
 Route::get('/kategori/{id}/detail', [HomeController::class, 'kategoriproduk']);
 Route::get('/produk/cari', [HomeController::class, 'cariProduk']);

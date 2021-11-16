@@ -40,8 +40,8 @@
               </div>
               <div class="card-footer">
                 <div class="text-left">
-                  <a href="#" class="btn btn-sm btn-primary">
-                    <i class="fas fa-shopping-cart"></i> Total Produk : 0
+                  <a href="/pengrajin/produk/{{$item->id}}" class="btn btn-sm btn-primary">
+                    <i class="fas fa-shopping-cart"></i> Total Produk : {{$item->produk->count()}}
                   </a>
                 </div>
               </div>
