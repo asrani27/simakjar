@@ -6,6 +6,10 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 
   <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+  
+  <!-- Select2 -->
+  <link rel="stylesheet" href="/theme/plugins/select2/css/select2.min.css">
+  <link rel="stylesheet" href="/theme/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
 @endpush
 @section('title')
     TAMBAH
@@ -24,7 +28,7 @@
                     <div class="form-group row">
                     <label class="col-sm-2 col-form-label">Nama Toko</label>
                     <div class="col-sm-10">
-                        <select name="toko_id" class="form-control" required>
+                        <select name="toko_id" class="form-control select2" required>
                             <option value="">-toko-</option>
                             @foreach ($toko as $item)
                             <option value="{{$item->id}}">{{$item->nama_toko}}</option>
@@ -94,6 +98,20 @@
 
 @push('js')
 
+
+<!-- Select2 -->
+<script src="/theme/plugins/select2/js/select2.full.min.js"></script>
+<script>
+    $(function () {
+      //Initialize Select2 Elements
+      $('.select2').select2()
+  
+      //Initialize Select2 Elements
+      $('.select2bs4').select2({
+        theme: 'bootstrap4'
+      })
+    })
+</script>
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
 <script>
     $(document).ready(function() {

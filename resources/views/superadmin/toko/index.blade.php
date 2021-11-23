@@ -36,7 +36,7 @@
             <tbody>
             @foreach ($data as $key => $item)
                     <tr style="font-size:12px; font-family:Arial, Helvetica, sans-serif">
-                    <td>{{$no++}}</td>
+                    <td>{{$data->firstItem() + $key}}</td>
                     <td>
                         @if ($item->foto == null)
                         <img class="direct-chat-img" src="/theme/dist/img/default-150x150.png" alt="message user image">
