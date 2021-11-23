@@ -13,7 +13,7 @@ class ProdukController extends Controller
 {
     public function index()
     {
-        $data = Produk::paginate(10);
+        $data = Produk::orderBy('id','DESC')->paginate(10);
         return view('superadmin.produk.index',compact('data'));
     }
     
