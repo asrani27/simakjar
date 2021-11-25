@@ -12,16 +12,21 @@
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
           </ol>
-          <div class="carousel-inner">
+          <div class="carousel-inner text-center">
+            <div class="carousel-item active">
+              <video  width="100%" height="400" autoplay loop muted controls>
+                <source src="/theme/welcome.mp4" type="video/mp4" />
+              </video>
+            </div>
             @foreach ($banner as $item)
                 
-            <div class="carousel-item {{$item->id == 1 ? 'active':''}}">
+            {{-- <div class="carousel-item {{$item->id == 1 ? 'active':''}}">
               @if ($item->foto == null)
               <img class="d-block w-100" src="https://p0.piqsels.com/preview/378/771/661/romania-cluj-napoca-wallpaper-hd.jpg" height="400px">
               @else
               <img class="d-block w-100" src="/storage/banner/{{$item->foto}}" height="400px">
               @endif
-            </div>
+            </div> --}}
             @endforeach
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
