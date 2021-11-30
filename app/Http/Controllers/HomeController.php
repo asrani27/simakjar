@@ -74,7 +74,7 @@ class HomeController extends Controller
 
     public function welcome()
     {
-        $produk = Produk::orderBy('created_at', 'DESC')->paginate(6);
+        $produk = Produk::orderBy('created_at', 'DESC')->paginate(12);
         $banner = Banner::get();
         $kategori = Kategori::get();
         $profil = Profil::first();
